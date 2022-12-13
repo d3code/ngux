@@ -1,24 +1,26 @@
-# Ngux
+# ngux
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## ngux-dropdown
 
-## Code scaffolding
+Provides a dropdown component container that can be triggered by any element identified with a `[dropdown]` attribute
 
-Run `ng generate component component-name --project ngux` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngux`.
-> Note: Don't forget to add `--project ngux` or else it will be added to the default project in your `angular.json` file. 
+Add `NguxModule` to `app.module.ts`
 
-## Build
+```ts
+import { NguxModule } from 'ngux';
 
-Run `ng build ngux` to build the project. The build artifacts will be stored in the `dist/` directory.
+imports: [
+  ...
+  NguxModule
+]
+```
 
-## Publishing
+```html
+<a dropdown="some-trigger">Open dropdown</a>
 
-After building your library with `ng build ngux`, go to the dist folder `cd dist/ngux` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngux` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<ngux-dropdown trigger="some-trigger" [width]="400">
+  <div class="container">
+    ...
+  </div>
+</ngux-dropdown>
+```
