@@ -1,0 +1,21 @@
+<div>
+  <ul class="inline pagination">
+
+    <li>
+      <a (click)="pagination.previousPage()">
+        <i class="fa-solid fa-chevron-left fa-fw"></i>
+      </a>
+    </li>
+
+    <li class="page-number">
+      <p>{{pagination.currentPage + 1}} of {{pagination.getTotalPages()}}</p>
+    </li>
+
+    <li>
+      <a (click)="pagination.nextPage()">
+        <i class="fa-solid fa-chevron-right fa-fw"></i>
+      </a>
+    </li>
+
+  </ul>
+</div>

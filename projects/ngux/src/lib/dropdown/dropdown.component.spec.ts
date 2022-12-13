@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NguxDropdownComponent } from './ngux-dropdown.component';
+import { NguxDropdownComponent } from './dropdown.component';
 
 describe('NguxComponent', () => {
   let component: NguxDropdownComponent;

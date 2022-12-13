@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
+import { getMaxIndex } from '../ngux.service';
 
 @Component({
   selector: 'ngux-dropdown',
@@ -212,13 +213,4 @@ export class NguxDropdownComponent implements OnInit, OnDestroy {
       this.contentElement.style.left = margin + 'px';
     }
   }
-}
-
-function getMaxIndex() {
-  return Math.max(
-    ...Array.from(document.querySelectorAll('body *'), el =>
-      parseFloat(window.getComputedStyle(el).zIndex),
-    ).filter(zIndex => !Number.isNaN(zIndex)),
-    0,
-  );
 }
